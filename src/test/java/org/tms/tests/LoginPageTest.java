@@ -1,7 +1,6 @@
 package org.tms.tests;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.tms.model.User;
 import org.tms.services.LoginPageService;

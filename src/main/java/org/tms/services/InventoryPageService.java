@@ -1,6 +1,5 @@
 package org.tms.services;
 
-import org.tms.model.User;
 import org.tms.page.InventoryPage;
 import org.tms.page.YourCartPage;
 
