@@ -15,7 +15,7 @@ public class YourCartPage extends BasePage {
     private WebElement checkoutButton;
 
     public String getTextOfYourCartPage() {
-        nameOfYourCartPage.getText();
+        waitElement(nameOfYourCartPage).getText();
         return nameOfYourCartPage.getText();
     }
 

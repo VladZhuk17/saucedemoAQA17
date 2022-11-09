@@ -20,7 +20,7 @@ public class LoginPage extends BasePage{
     }
 
     public LoginPage fillUsername(String userName){
-        username.clear();
+        waitElement(username).clear();
         username.sendKeys(userName);
         return this;
     }

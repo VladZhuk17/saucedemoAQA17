@@ -15,7 +15,7 @@ public class InventoryPage extends BasePage{
     private WebElement shoppingCartLinkButton;
 
     public String getTextOfNameOfMainPageSection() {
-        nameOfMainPageSection.getText();
+        waitElement(nameOfMainPageSection).getText();
         return nameOfMainPageSection.getText();
     }
     public InventoryPage openPage(String url){

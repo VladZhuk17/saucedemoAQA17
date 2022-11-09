@@ -3,7 +3,7 @@ package org.tms.page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class CheckoutYourInformationPage {
+public class CheckoutYourInformationPage extends BasePage {
     @FindBy(xpath = "//span[@class='title']")
     private WebElement nameOfCheckoutYourInformationPage;
 
@@ -19,20 +19,20 @@ public class CheckoutYourInformationPage {
     @FindBy(xpath = "//input[@id='continue']")
     private WebElement continueButton;
 
-    public CheckoutYourInformationPage fullFirstName(String personName){
-        firstName.clear();
+    public CheckoutYourInformationPage fillFirstName(String personName){
+        waitElement(firstName).clear();
         firstName.sendKeys(personName);
         return this;
     }
 
-    public CheckoutYourInformationPage fullLastName(String personLastName){
-        firstName.clear();
+    public CheckoutYourInformationPage fillLastName(String personLastName){
+        waitElement(firstName).clear();
         firstName.sendKeys(personLastName);
         return this;
     }
 
-    public CheckoutYourInformationPage fullPostalCode (String zipOrPostalCode){
-        postalCode.clear();
+    public CheckoutYourInformationPage fillPostalCode (String zipOrPostalCode){
+        waitElement(postalCode).clear();
         postalCode.sendKeys(zipOrPostalCode);
         return this;
     }
