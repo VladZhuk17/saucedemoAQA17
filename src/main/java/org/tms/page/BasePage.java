@@ -6,7 +6,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.tms.driver.DriverSingleton;
-import java.time.Duration;
 
 public abstract class BasePage {
 
@@ -18,7 +17,6 @@ public abstract class BasePage {
     }
 
     protected WebElement waitElement (WebElement element){
-        return new WebDriverWait(driver, Duration.ofSeconds(WAIT_ELEMENT_SECONDS)).
-                until(ExpectedConditions.elementToBeClickable(element));
+        return new WebDriverWait(driver, WAIT_ELEMENT_SECONDS).until(ExpectedConditions.visibilityOf(element));
         }
     }

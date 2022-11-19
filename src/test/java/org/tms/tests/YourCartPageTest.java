@@ -9,7 +9,7 @@ import org.tms.services.LoginPageService;
 
 public class YourCartPageTest extends BaseTest{
 
-    @Test
+    @Test (description = "Add the inventory to the cart and check it adding")
     public void verifyInventoryInCartTest(){
         YourCartPage yourCartPage = new YourCartPage();
         InventoryPageService inventoryPageService = new InventoryPageService();

@@ -1,5 +1,6 @@
 package org.tms.services;
 
+import io.qameta.allure.Step;
 import org.tms.page.InventoryPage;
 import org.tms.page.YourCartPage;
 
@@ -8,6 +9,7 @@ public class InventoryPageService extends LoginPageService{
     private static final String INVENTORY_PAGE_URL = "https://www.saucedemo.com/inventory.html";
     protected InventoryPage inventoryPage = new InventoryPage();
 
+    @Step("AddInventoryToCart")
     public YourCartPage addInventoryToCart() {
                 inventoryPage.openPage(INVENTORY_PAGE_URL).clickButtonAddToCartBackpack()
                                                   .clickButtonShoppingCartLink();

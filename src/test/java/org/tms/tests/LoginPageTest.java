@@ -7,7 +7,7 @@ import org.tms.services.LoginPageService;
 
 public class LoginPageTest extends BaseTest{
 
-    @Test
+    @Test(description = "Log in a user")
     public void loginTest(){
         LoginPageService loginPageService = new LoginPageService();
         User user = new User();
@@ -16,5 +16,4 @@ public class LoginPageTest extends BaseTest{
         Assert.assertEquals(actualTextOfInventoryPage, expectedTextOfInventoryPage, "The actual text of the " +
                 "page doesn't match expected");
     }
-
 }
