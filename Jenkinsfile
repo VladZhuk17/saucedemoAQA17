@@ -11,8 +11,7 @@ pipeline {
     }
     parameters {
         gitParameter branchFilter: 'origin/(.*)', defaultValue: 'branch1', name: 'BRANCH', type: 'PT_BRANCH'
-        booleanParam(defaultValue: true, description: 'Headless mode', name: 'HEADLESS')
-        string(name: 'DEPLOY_ENV', defaultValue: 'staging', description: '')
+
     }
 
    stages {
