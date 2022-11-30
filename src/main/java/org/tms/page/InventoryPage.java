@@ -1,7 +1,10 @@
 package org.tms.page;
 
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+@Log4j2
 
 public class InventoryPage extends BasePage{
 
@@ -15,19 +18,23 @@ public class InventoryPage extends BasePage{
     private WebElement shoppingCartLinkButton;
 
     public String getTextOfNameOfMainPageSection() {
+        log.info("INFO: get text name of main page section");
         waitElement(nameOfMainPageSection).getText();
         return nameOfMainPageSection.getText();
     }
     public InventoryPage openPage(String url){
+        log.debug("DEBUG: open Inventory page");
         driver.get(url);
         return this;
     }
 
     public InventoryPage clickButtonAddToCartBackpack(){
+        log.info("INFO: click on the button Cart Backpack");
         addToCartBackpack.click();
         return this;
     }
     public void clickButtonShoppingCartLink(){
+        log.info("INFO: INFO: click on the button shopping cart link");
         shoppingCartLinkButton.click();
     }
 }

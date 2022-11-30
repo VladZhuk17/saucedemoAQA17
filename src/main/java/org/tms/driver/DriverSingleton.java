@@ -1,11 +1,14 @@
 package org.tms.driver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import java.util.concurrent.TimeUnit;
+
+@Log4j2
 
 public class DriverSingleton {
 
@@ -15,6 +18,7 @@ public class DriverSingleton {
     }
 
     public static WebDriver getDriver() {
+        log.info("INFO: start Driver");
         if (null == driver) {
             switch (System.getProperty("browser", "chrome")) {
                 case "opera": {
@@ -28,9 +32,13 @@ public class DriverSingleton {
                     break;
                 }
                 default: {
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
-                    break;
+                    try {
+                        WebDriverManager.chromedriver().setup();
+                        driver = new ChromeDriver();
+                        break;
+                    } catch (Exception e) {
+                        log.fatal("FATAL: Driver didn't start");
+                    }
                 }
             }
             driver.manage().window().maximize();
@@ -40,6 +48,7 @@ public class DriverSingleton {
     }
 
     public static void closeDriver() {
+        log.info("INFO: close Driver");
         driver.quit();
         driver = null;
     }

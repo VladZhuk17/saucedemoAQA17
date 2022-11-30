@@ -10,7 +10,7 @@
 
     <properties>
         <aspect.version>1.9.6</aspect.version>
-        <jackson.version>2.12.3</jackson.version>
+        <jackson.version>2.14.0</jackson.version>
     </properties>
     <build>
         <plugins>
@@ -102,5 +102,12 @@
             <version>7.4.0</version>
             <scope>compile</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.14.0</version>
+        </dependency>
+
     </dependencies>
 </project>
