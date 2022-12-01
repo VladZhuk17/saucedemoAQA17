@@ -49,7 +49,6 @@ public class CheckoutYourInformationPage extends BasePage {
     }
 
     public String getTextOfCheckoutYourInformationPage() {
-        log.info("INFO: get text from checkout information page");
         nameOfCheckoutYourInformationPage.getText();
         return nameOfCheckoutYourInformationPage.getText();
     }

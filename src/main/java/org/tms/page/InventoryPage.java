@@ -23,7 +23,6 @@ public class InventoryPage extends BasePage{
         return nameOfMainPageSection.getText();
     }
     public InventoryPage openPage(String url){
-        log.debug("DEBUG: open Inventory page");
         driver.get(url);
         return this;
     }
