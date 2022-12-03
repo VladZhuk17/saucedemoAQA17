@@ -18,11 +18,11 @@ public class InventoryPage extends BasePage{
     private WebElement shoppingCartLinkButton;
 
     public String getTextOfNameOfMainPageSection() {
-        log.info("INFO: get text name of main page section");
         waitElement(nameOfMainPageSection).getText();
         return nameOfMainPageSection.getText();
     }
     public InventoryPage openPage(String url){
+        log.info("INFO: open Inventory page");
         driver.get(url);
         return this;
     }

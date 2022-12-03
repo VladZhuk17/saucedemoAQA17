@@ -5,13 +5,12 @@ import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.opera.OperaDriver;
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 @Log4j2
 
 public class DriverSingleton {
-
+    private static final int WAITING = 2;
     private static WebDriver driver;
 
     private DriverSingleton() {
@@ -21,11 +20,6 @@ public class DriverSingleton {
         log.info("INFO: start Driver");
         if (null == driver) {
             switch (System.getProperty("browser", "chrome")) {
-                case "opera": {
-                    WebDriverManager.operadriver().setup();
-                    driver = new OperaDriver();
-                    break;
-                }
                 case "firefox": {
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
@@ -42,7 +36,7 @@ public class DriverSingleton {
                 }
             }
             driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WAITING));
         }
         return driver;
     }

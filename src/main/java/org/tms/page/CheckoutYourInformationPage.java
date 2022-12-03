@@ -49,7 +49,6 @@ public class CheckoutYourInformationPage extends BasePage {
     }
 
     public String getTextOfCheckoutYourInformationPage() {
-        nameOfCheckoutYourInformationPage.getText();
         return nameOfCheckoutYourInformationPage.getText();
     }
 }

@@ -18,14 +18,11 @@ public class YourCartPage extends BasePage {
     private WebElement checkoutButton;
 
     public String getTextOfYourCartPage() {
-        log.info("INFO: get the text of your cart page");
         waitElement(nameOfYourCartPage).getText();
         return nameOfYourCartPage.getText();
     }
 
     public String getNameOfInventorySauceLabsBackpack(){
-        log.info("INFO: get name of Inventory sauce labs backpack");
-        inventorySauceLabsBackpack.getText();
         return inventorySauceLabsBackpack.getText();
     }
 

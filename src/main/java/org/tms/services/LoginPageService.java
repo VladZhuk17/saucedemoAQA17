@@ -15,7 +15,7 @@ public class LoginPageService {
 
     @Step ("Log in and open Inventory Page")
     public InventoryPage login (User user){
-     //   log.info("INFO: Log in and open Inventory Page");
+        log.info("INFO: Log in and open Inventory Page");
         loginPage.openPage(LOGIN_PAGE_URL)
                 .fillUsername(user.getLogin())
                 .fillPassword(user.getPassword())

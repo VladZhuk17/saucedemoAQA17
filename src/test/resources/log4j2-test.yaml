@@ -30,9 +30,9 @@ Configuration:
         AppenderRef:
           ref: fileAppender
     Root:
-      level: DEBUG
+      level: INFO
       AppenderRef:
         - ref: consoleAppender
-          level: DEBUG
+          level: INFO
         - ref: fileAppender
-          level: DEBUG
+          level: INFO
