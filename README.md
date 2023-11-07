@@ -1,6 +1,6 @@
 Topic: Architecture. Page Object. 
 
-Application: https://www.saucedemo.com.
+Application: https://www.saucedemo.com
 
 Tasks: 
 1) To create Page Object architecture.
