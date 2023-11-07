@@ -10,5 +10,3 @@ Tasks:
    1. Log in as a user.
    2. To add a cart.
    3. To add the inventory to the cart and check it adding.
-   
-# saucedemoAQA17
