@@ -1,5 +1,5 @@
-Тема: Архетектура. Page Object. 
-Ресурс https://www.saucedemo.com
+Topic: Architecture. Page Object. 
+Application: https://www.saucedemo.com
 Tasks: 
 1) To create Page Object architecture.
 2) To use such design patterns as Page Object Pattern, Page Factory, and Chain of Invocations.
